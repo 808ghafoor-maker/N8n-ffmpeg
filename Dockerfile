@@ -1,5 +1,11 @@
+FROM node:20-alpine
 
-FROM n8nio/n8n:latest
-USER root
-RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
-USER node
+RUN apk add --no-cache ffmpeg tzdata
+
+RUN npm install -g n8n
+
+WORKDIR /data
+
+EXPOSE 5678
+
+CMD ["n8n"]
