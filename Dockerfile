@@ -1,7 +1,7 @@
 
 FROM node:22-alpine
 
-RUN apk add --no-cache ffmpeg tzdata fontconfig ttf-dejavu python3 make g++
+RUN apk add --no-cache ffmpeg tzdata fontconfig ttf-dejavu python3 py3-setuptools make g++
 
 RUN npm install -g n8n@latest
 
