@@ -1,8 +1,8 @@
-FROM node:20-alpine
+FROM node:22-alpine
 
-RUN apk add --no-cache ffmpeg tzdata
+RUN apk add --no-cache ffmpeg tzdata fontconfig ttf-dejavu
 
-RUN npm install -g n8n
+RUN npm install -g n8n@latest
 
 WORKDIR /data
 
